@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatIconModule } from '@angular/material/icon'; // Import MatIconModule
+import { MatIconModule } from '@angular/material/icon'; 
 import { NewTenderDataService, NewTenderSection } from 'src/app/services/new-tender-data.service';
 
 @Component({
