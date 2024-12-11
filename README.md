@@ -1,10 +1,28 @@
-To run this application correctly you need to have:
 
-- Angular version 18 installed
-- Node minimum version: v18.20.5
-- NPM minimum version: 10.8.2
-- Visual Studio Code or any other IDE of choice
+Here’s a polished and professional version of your instructions:
 
-Run npm install on the project folder to install the application dependencies
-Run npm start to run the application on your machine.
-Open the http://localhost:4200/ URL on your browser to access the application
+Prerequisites for Running the Application
+To run this application successfully, ensure the following requirements are met:
+
+Angular: Version 18 or higher installed.
+Node.js: Minimum version v18.20.5.
+NPM: Minimum version 10.8.2.
+Code Editor: Install Visual Studio Code or any IDE of your choice.
+Steps to Run the Application
+Install Dependencies:
+Open a terminal in the project folder and run the following command:
+
+bash
+Copy code
+npm install
+Start the Application:
+After dependencies are installed, start the application by running:
+
+bash
+Copy code
+npm start
+Access the Application:
+Open your browser and navigate to:
+http://localhost:4200/
+
+Enjoy using the application!
