@@ -1,0 +1,65 @@
+<div class="theme-settings">
+  <h1>Branding</h1>
+
+  <!-- Logo Path -->
+  <h3>Logo</h3>
+  <mat-form-field appearance="fill">
+    <mat-label>Logo Path</mat-label>
+    <input matInput type="text" [(ngModel)]="theme.logo" />
+  </mat-form-field>
+  <!-- Logo Preview -->
+  <div class="logo-preview">
+    <h3>Logo Preview</h3>
+    <img [src]="theme.logo" alt="Logo Preview" />
+  </div>
+
+  <!-- Background Color -->
+  <h3>Primary Colors</h3>
+  <mat-form-field appearance="fill">
+    <mat-label>Background Color</mat-label>
+    <input matInput type="color" [(ngModel)]="theme.background" />
+  </mat-form-field>
+
+  <!-- Primary Text Color -->
+  <mat-form-field appearance="fill">
+    <mat-label>Primary Text Color</mat-label>
+    <input matInput type="color" [(ngModel)]="theme.textPrimary" />
+  </mat-form-field>
+
+  <!-- Primary Button Color -->
+  <mat-form-field appearance="fill">
+    <mat-label>Primary Button Color</mat-label>
+    <input matInput type="color" [(ngModel)]="theme.primaryButtonColor" />
+  </mat-form-field>
+  <!-- Card Shadow -->
+
+  <h3>Secondary Colors</h3>
+  <mat-form-field appearance="fill">
+    <mat-label>Card Shadow</mat-label>
+    <input matInput type="color" [(ngModel)]="theme.cardshadow" />
+  </mat-form-field>
+
+  <!-- Dark Card Shadow -->
+  <mat-form-field appearance="fill">
+    <mat-label>Dark Card Shadow</mat-label>
+    <input matInput type="color" [(ngModel)]="theme.darkcardshadow" />
+  </mat-form-field>
+
+  <!-- White -->
+  <mat-form-field appearance="fill">
+    <mat-label>White</mat-label>
+    <input matInput type="color" [(ngModel)]="theme.white" />
+  </mat-form-field>
+
+
+
+  <!-- Buttons -->
+  <div class="button-group">
+    <button mat-raised-button class="apply-button" [ngStyle]="{ backgroundColor: theme.primaryButtonColor }" (click)="applyChanges()">
+      Apply
+    </button>
+    <button mat-raised-button class="reset-button" (click)="resetTheme()">
+      Reset
+    </button>
+  </div>
+</div>

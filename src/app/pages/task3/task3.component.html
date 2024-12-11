@@ -1,0 +1,82 @@
+<div class="page-container">
+ 
+
+  <div class="content-container">
+    
+    <div class="page-header">
+      <h2 class="page-title">My deals</h2>
+      <header class="top-bar" role="banner">
+        <nav class="header-actions" aria-label="Primary">
+          <button mat-button [matMenuTriggerFor]="tenderMenu" class="new-tender-btn" aria-label="Open new tender menu">
+           <span class="d-flex">New tender  <mat-icon>expand_more</mat-icon> </span>
+          </button>
+          <mat-menu #tenderMenu="matMenu">
+            <button mat-menu-item>Electricity</button>
+            <button mat-menu-item>Gas</button>
+          </mat-menu>
+        </nav>
+      </header>
+    </div>
+
+    <div class="table-card">
+      <table mat-table [dataSource]="dataSource" matSort class="deals-table">
+
+        <ng-container matColumnDef="created">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>
+            <mat-icon>filter_list</mat-icon>
+            Created
+          </th>
+          <td mat-cell *matCellDef="let element">{{ element.created }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="dueDate">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>
+            <mat-icon>filter_list</mat-icon>
+            Due date
+          </th>
+          <td mat-cell *matCellDef="let element">{{ element.dueDate }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="status">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>
+            <mat-icon>filter_list</mat-icon>
+            Status
+          </th>
+          <td mat-cell *matCellDef="let element">{{ element.status }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="customer">
+           
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>
+            <mat-icon>filter_list</mat-icon>
+            Customer
+          </th>
+          <td mat-cell *matCellDef="let element">{{ element.customer }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="meters">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>
+              <mat-icon>filter_list</mat-icon>
+            Meters
+ 
+          </th>
+          <td mat-cell *matCellDef="let element">{{ element.meters }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="quotes">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>
+              <mat-icon>filter_list</mat-icon>
+            Quotes
+          </th>
+          <td mat-cell *matCellDef="let element">{{ element.quotes }}</td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns" class="header-row"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+    <div class="paginator-container">
+      <mat-paginator [length]="40" [pageSize]="10" [pageSizeOptions]="[5, 10, 20]"></mat-paginator>
+    </div>
+  </div>
+</div>
