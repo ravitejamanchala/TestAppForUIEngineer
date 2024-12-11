@@ -12,17 +12,16 @@ export class ThemeService {
     darkcardshadow: '#666666',
     white: '#ffffff',
     primaryButtonColor:"#2a3447",
-    logo: 'https://accounts.powwr.com/assets/powwr-logo-Unbranded.svg', // Default logo path
+    logo: 'https://accounts.powwr.com/assets/powwr-logo-Unbranded.svg', 
   };
 
   private themeSource = new BehaviorSubject<any>(this.loadThemeFromLocalStorage());
-  theme$ = this.themeSource.asObservable(); // Observable for theme changes
+  theme$ = this.themeSource.asObservable(); 
 
   private logoSource = new BehaviorSubject<string>(this.defaultTheme.logo);
-  logo$ = this.logoSource.asObservable(); // Observable for logo changes
-
+  logo$ = this.logoSource.asObservable(); 
   constructor() {
-    this.applyTheme(this.themeSource.value); // Apply theme on service initialization
+    this.applyTheme(this.themeSource.value); 
   }
 
   // Load theme from localStorage or return default
